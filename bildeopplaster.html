@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');
+          img.onload = () => {
+              URL.revokeObjectURL(img.src);
+          }
+          img.src = URL.createObjectURL(this.files[0]);
+      }
+  });
+});
+</script>
+</head>
+<body>
+<input type='file' />
+<br><img id="myImg" src="#">
+<script type="text/javascript">
+	let youtubeimgsrc = document.getElementById("myImg").src; // denne MÅ etter img
+
+</script>
+</body>
+</html>
