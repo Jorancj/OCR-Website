@@ -7,7 +7,7 @@
 	<meta name="description" content="Progress through connections0">
 	<meta name="keywords" content="Humble, stayhungry, gitgud">
 	<meta name="author" content="Gruppe 4">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 	<main>
@@ -20,12 +20,20 @@
 			</nav>
 		</div>
 		<div class="firstheader">
-			<div><h1>FREE OCR SERVICE ( NO SCAM )</h1></div>
+			<div><h1></h1></div>
 		</div>
 		<div class="perkhoved">
 			<div class="perkparent">
 				<div class="perkoverskrift"><h2>INPUT</h2></div>
-				<div class="perkttekst"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p></div>
+
+				<div class="perkttekst">
+					<!--Dette er OCR input knappen-->
+					<form id="uploadForm" enctype="multipart/form-data" action="/api/upload" method="post">
+						<input type="file" id="12345" name="uploadedImage">
+						<input type="submit">
+					</form>
+
+				</div>
 			</div>
 
 			<div class="perkparent">
@@ -48,5 +56,9 @@
 	 		</div>	
 		 </div>
 	</footer>
+
+	<script src="static/jq.js"></script>
+	<script src="static/jqForm.js"></script>
+	<script src="static/index.js"></script>
 </body>
 </html>

@@ -14,6 +14,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage});
 
+app.use('/static',express.static('static'))
+
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname +"/index.html")
+})
+
+
+
 app.post('/api/upload',upload.single('uploadedImage'),(req,res)=>{
     console.log(req.file);
 
@@ -36,6 +44,6 @@ app.post('/api/upload',upload.single('uploadedImage'),(req,res)=>{
 })
 
 app.listen(4000, ()=>{
-    console.log('Server is up and running on port 4000')
+    console.log(`Listening at http://localhost:4000`)
 })
 
