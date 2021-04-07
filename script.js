@@ -16,8 +16,14 @@ const upload = multer({storage:storage});
 
 app.use('/static',express.static('static'))
 
+app.use('/img',express.static('img'))
+
 app.get('/',(req,res)=>{
     res.sendFile(__dirname +"/index.html")
+})
+
+app.get('/aboutus',(req,res)=>{
+    res.sendFile(__dirname +"/aboutus.html")
 })
 
 
