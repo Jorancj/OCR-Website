@@ -1,0 +1,109 @@
+* {
+	color: White;
+}
+
+body {
+	background-color: #34bbcf;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.headermain {
+	width: 100%;
+}
+
+.toppnav {
+}
+
+.headerlinker {
+  display: inline-block;
+  padding: 3%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.stylelink:link {
+  color: White;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.stylelink:visited {
+  color: White;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.stylelink:active {
+  color: White;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.firstheader {
+	width: 100%;
+	color: White;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.perkhoved {
+	display: inline;
+ 	width: 100%;
+ 	color: White;
+ 	margin-left: 5%;
+}
+
+.perkparent {
+  display: inline-block;
+  width: 29%;
+}
+
+.perkoverskrift {
+	text-align: center;
+}
+
+.perkbilde {
+  max-width: 100%;
+  display: inline;
+  text-align: left;
+}
+
+.perktekst {
+	width: 100%;
+  background-color: White;
+}
+
+.perktekst {
+  width: 100%;
+  background-color: White;
+}
+
+footer {
+	position: relative;
+	justify-content: center;
+ 	align-items: center;
+ 	height: 10%;
+}
+
+.footerparent {
+	margin-left: 40%;
+}
+
+.footerbilde {
+  display: inline-flex;
+  max-width: 5%;
+  padding: 3%;
+}
+
+.socialpic {
+	width: 100%;
+}
+
+.button { /* Green */
+  border: none;
+  color: Black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
