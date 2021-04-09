@@ -37,6 +37,7 @@ app.post('/api/upload',upload.single('uploadedImage'),(req,res)=>{
             'eng',
             {logger:m =>console.log(m)}
         ).then(({data:{text}})=>{
+            console.log(text)
 
             return res.json(
                 {
