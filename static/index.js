@@ -6,6 +6,8 @@ $(document).ready(function(){
        $(this).ajaxSubmit({
            error:function (xhr){
                console.log(xhr);
+               $("#progress").hide();
+               $("#err").text("noe gikk galt");
            },
            success:function (res){
                $("#OCROutput").text(res.message);
