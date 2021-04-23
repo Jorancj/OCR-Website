@@ -11,7 +11,7 @@ $(document).ready(function(){
            },
            success:function (res){
                $("#OCROutput").text(res.message);
-               $("#OCROutput").css('color', '#212121');
+               $("#OCROutput").css('color', '#FFFFFF');
                $("#progress").hide();
            }
        });

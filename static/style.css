@@ -3,15 +3,26 @@
 }
 
 body {
-	background-color: #34bbcf;
 	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(img/bak.jpg);
+	background-size: 100%;
+	background-repeat: repeat;
 }
 
 .headermain {
 	width: 100%;
 }
 
-.toppnav {
+input[type=submit]{
+  color: black;
+}
+
+.bigboi {
+	text-align: center;
+}
+
+.bigbrother {
+
 }
 
 .headerlinker {
@@ -47,15 +58,16 @@ body {
 }
 
 .perkhoved {
-	display: inline;
  	width: 100%;
  	color: White;
- 	margin-left: 5%;
+ 	font-weight: bold;
+ 	margin-left: 0 auto;
+ 	text-align: center;
 }
 
 .perkparent {
-  display: inline-block;
-  width: 29%;
+  text-align: center;
+  position: relative;
 }
 
 .perkoverskrift {
@@ -65,17 +77,13 @@ body {
 .perkbilde {
   max-width: 100%;
   display: inline;
-  text-align: left;
+  border: 5px solid white;
 }
 
 .perktekst {
-	width: 100%;
-  background-color: White;
-}
-
-.perktekst {
-  width: 100%;
-  background-color: White;
+	max-width: 40%;
+  text-align: center;
+  margin-left: 30%;
 }
 
 footer {
@@ -106,7 +114,4 @@ footer {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-}
-img{
-    max-width:180px;
 }

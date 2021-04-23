@@ -13,13 +13,14 @@
 	window.addEventListener('load', function() {
 	  document.querySelector('input[type="file"]').addEventListener('change', function() {
 	      if (this.files && this.files[0]) {
-	          var img = document.querySelector('img');
-	          img.onload = () => {
-	              URL.revokeObjectURL(img.src);
-	          }
-	          img.src = URL.createObjectURL(this.files[0]);
+          	var img = document.querySelector('img');
+          	img.onload = () => {
+              URL.revokeObjectURL(img.src);
+          	}
+	        img.src = URL.createObjectURL(this.files[0]);
+	        img.style= ("max-width: 180px;")
 	      }
-	  });
+	  	});
 	});
 	</script>
 	<script type="text/javascript">
@@ -35,37 +36,38 @@
 			<nav id="toppNav">
 				<ul>
 					<li class="headerlinker"><a class="stylelink"><p>HOME</p></a></li>
-					<li class="headerlinker"><a class="stylelink" href="/aboutus"><p>ABOUT US</p></a></li>
+					<li class="headerlinker"><a class="stylelink" href="/aboutus"><p>HOW TO USE THE SERVICE</p></a></li>
 				</ul>
 			</nav>
 		</div>
-		<div class="firstheader">
-			<div><h1></h1></div>
-		</div>
-		<div class="inputbox">
-			<div class="perkparent">
-				<div class="perkoverskrift"><h2>INPUT</h2></div>
-					<img id="myImg" src="#" onchange="ChangeValue()"></div>
-				<br>
-				<div class="perkttekst">
-					<!--Dette er OCR input knappen-->
-					<form id="uploadForm" enctype="multipart/form-data" action="/api/upload" method="post">
-						<input type="file" id="12345" accept="image/*" capture="camera" name="uploadedImage">
-						<input type="submit">
-					</form>
+		<div class="bigboi">
+			<div class="firstheader">
+				<div><h1></h1></div>
+			</div>
+			<div class="inputbox">
+				<div class="perkparent">
+					<div class="perkoverskrift"><h2>INPUT</h2></div>
+						<img id="myImg" src="" onchange="ChangeValue()"></div>
+					<br>
+					<div class="perkttekst">
+						<!--Dette er OCR input knappen-->
+						<form id="uploadForm" enctype="multipart/form-data" action="/api/upload" method="post">
+							<input type="file" id="12345" accept="image/*" capture="camera" name="uploadedImage">
+							<input type="submit">
+						</form>
+					</div>
+				</div>
+			<div class="progressbox">
+				<div class="perkparent">
+					<div class="perkoverskrift" ><h2 id="err">PROGRESS</h2></div>
+					<progress id="progress"></progress>
 				</div>
 			</div>
-		</div>
-		<div class="progressbox">
-			<div class="perkparent">
-				<div class="perkoverskrift" ><h2 id="err">POGGRESS</h2></div>
-				<progress id="progress"></progress>
-			</div>
-		</div>
-		<div class="outputbox">
-			<div class="perkparent">
-				<div class="perkoverskrift"><h2>OUTPUT</h2></div>
-				<div class="perkttekst"><p id="OCROutput">Amogus</p></div>
+			<div class="outputbox">
+				<div class="perkparent">
+					<div class="perkoverskrift"><h2>OUTPUT</h2></div>
+					<div class="perkttekst"><p id="OCROutput"> </p></div>
+				</div>
 			</div>
 		</div>
 	</main>
